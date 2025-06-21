@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Advanced Weather & Quiz App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Weather & Quiz Portal</h1>
+  </header>
+
+  <button id="toggle-theme">Toggle Dark Mode</button>
+  <button id="use-location">📍 Use My Location</button>
+
+  <!-- Weather Section -->
+  <section id="weather-section">
+    <h2>Check the Weather</h2>
+    <div id="weather-controls">
+      <input type="text" id="city-input" placeholder="Enter city" />
+      <button id="get-weather-btn">Get Weather</button>
+      <button id="toggle-units">Switch to °F</button>
+    </div>
+
+    <div id="search-history"></div>
+
+    <div id="weather-display" class="hidden">
+      <h3 id="city-name"></h3>
+      <img id="weather-icon" alt="Icon" />
+      <p><strong>Temperature:</strong> <span id="temp"></span></p>
+      <p><strong>Feels Like:</strong> <span id="feels-like"></span></p>
+      <p><strong>Conditions:</strong> <span id="conditions"></span></p>
+      <p><strong>Humidity:</strong> <span id="humidity"></span>%</p>
+      <p><strong>Wind Speed:</strong> <span id="wind"></span> km/h</p>
+      <p><strong>Sunrise:</strong> <span id="sunrise"></span></p>
+      <p><strong>Sunset:</strong> <span id="sunset"></span></p>
+      <div id="alert-box"></div>
+    </div>
+
+    <div id="forecast" class="hidden">
+      <h3>5-Day Forecast</h3>
+      <div id="forecast-cards"></div>
+    </div>
+  </section>
+
+  <!-- Quiz Section -->
+  <section id="quiz-section">
+    <h2>Take the Quiz</h2>
+    <div id="quiz-container">
+      <p id="question">Loading...</p>
+      <div id="options"></div>
+      <button id="next-btn">Next</button>
+      <p id="score" class="hidden">Score: <span id="score-val"></span>/<span id="total-val"></span></p>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>

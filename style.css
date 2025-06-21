@@ -1,0 +1,142 @@
+/* style.css */
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to right, #cce5ff, #e6f0ff);
+  color: #333;
+  transition: background 0.5s ease, color 0.5s ease;
+  overflow-x: hidden;
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 100%;
+  background: url('https://i.ibb.co/YZKPfbH/clouds.png') repeat-x;
+  animation: moveClouds 60s linear infinite;
+  opacity: 0.2;
+  z-index: 0;
+}
+
+@keyframes moveClouds {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+header, section, button, input, h2, h3, p {
+  position: relative;
+  z-index: 1;
+}
+
+header {
+  text-align: center;
+  padding: 20px;
+  background-color: #0077cc;
+  color: white;
+}
+
+section {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+button {
+  margin: 10px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #0077cc;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #005fa3;
+}
+
+#weather-controls input {
+  padding: 10px;
+  margin-right: 10px;
+  width: 60%;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+#weather-display img {
+  width: 100px;
+  height: 100px;
+}
+
+#forecast-cards {
+  display: flex;
+  overflow-x: auto;
+  gap: 10px;
+  padding-top: 10px;
+}
+
+#forecast-cards .card {
+  background-color: #eef6fb;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  min-width: 120px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.hidden {
+  display: none;
+}
+
+.dark {
+  background: linear-gradient(to right, #2c3e50, #4ca1af);
+  color: white;
+}
+
+.dark section {
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+}
+
+#search-history button {
+  margin: 5px 5px 5px 0;
+  background-color: #ccc;
+  color: black;
+}
+
+#search-history button:hover {
+  background-color: #bbb;
+}
+
+#alert-box {
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #ffcccc;
+  color: #990000;
+  border-radius: 5px;
+  display: none;
+}
+
+#quiz-container button {
+  width: 100%;
+  margin: 5px 0;
+}
+
+#toggle-theme, #use-location, #toggle-units {
+  display: inline-block;
+  margin: 10px;
+}
